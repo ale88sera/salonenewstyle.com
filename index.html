@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it, en, de">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Salone New Style Loft, parrcchieri uomo e donna, estetica. Di Christian Gerotto & C.">
+    <meta name="author" content="Alessandro Seafini">
+
+    <title>Salone New Style - loft</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/icon.png" type="image/png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Google maps integration -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var myLatLng = new google.maps.LatLng(45.537258, 12.637071);
+        var mapOptions = {
+          center: myLatLng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: 'img/marker.png'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img src="img/logo.png" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Info</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contatti</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#map">Mappa</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#share">Condividi</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Salone<br />New Style</h1>
+                        <p class="intro-text">Parrucchieri Uomo e Donna, Estetica.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Orario</h2>
+                <table class="table">
+                  <tr class="warning">
+                    <td>Lunedì</td>
+                    <td>Chiuso</td>
+                  </tr>
+                  <tr>
+                    <td>Martedì</td>
+                    <td>9:00 - 18:00</td>
+                  </tr>
+                  <tr>
+                    <td>Mercoledì</td>
+                    <td>9:00 - 18:00</td>
+                  </tr>
+                  <tr>
+                    <td>Giovedì</td>
+                    <td>12:00 - 20:00</td>
+                  </tr>
+                  <tr>
+                    <td>Venerdì</td>
+                    <td>9:00 - 18:00</td>
+                  </tr>
+                  <tr>
+                    <td>Sabato</td>
+                    <td>9:00 - 18:00</td>
+                  </tr>
+                  <tr class="warning">
+                    <td>Domenica</td>
+                    <td>Chiuso</td>
+                  </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contattaci</h2>
+                <p>Per informazioni o per richiedere un appuntamento</p>
+                <p><a href="mailto:info@salonenewstyle.com">info@salonenewstyle.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://www.facebook.com/salonenewstyleloft" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/115689433411519820293/about" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+                <p></p>
+                <p>Via Antiche Mura 2, 30016 Jesolo VE</p>
+                <p></p>
+                <p>+39 0421 38 00 15</p>
+                <p>+39 327 53 64 519</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; www.salonenewstyle.com</p>
+            <p>chrilu s.n.c. di Christian gerotto & C. - P.I. 03299150270</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <!--
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm8N2ZysUODmcGBPPG40yeT85Sw2k0MWQ"></script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: 45.537460, lng: 12.636967},
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById('map'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+
+</body>
+
+</html>
