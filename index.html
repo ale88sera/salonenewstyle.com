@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it, en, de">
+<html lang="en">
 
 <head>
 
@@ -24,6 +24,10 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
     <!-- Google maps integration -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -114,8 +118,21 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Orario</h2>
+
                 <table class="table">
-                  <tr class="warning">
+                  <script>
+                  
+                    $.getJSON('https://spreadsheets.google.com/feeds/list/1celYChYpLD-DJ186EHeE9hFxOxpRbGz3HnZfVZZOCJc/od6/public/values?alt=json', function(data) {
+
+                      for (var i = 0; i < data.feed.entry.length; i++) {
+
+                        var day = data.feed.entry[i].gsx$dayname['$t'];
+                        var timeValue = data.feed.entry[i].gsx$statusvalue['$t'];
+                        document.write('<tr><td>'+ day +'</td><td>'+ timeValue +'</td></tr>');
+                      }
+                    });
+                  </script>
+                  <!-- <tr class="warning">
                     <td>Lunedì</td>
                     <td>Chiuso</td>
                   </tr>
@@ -142,7 +159,7 @@
                   <tr class="warning">
                     <td>Domenica</td>
                     <td>Chiuso</td>
-                  </tr>
+                  </tr> -->
                 </table>
             </div>
         </div>
@@ -184,8 +201,6 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
