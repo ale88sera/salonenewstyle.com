@@ -1,0 +1,39 @@
+{
+    "en": {
+        "closedString": "closed",
+        "header": "Opening hours"
+    },
+    "de": {
+        "closedString": "geschlossen",
+        "header": "Öffnungszeiten"
+    },
+    "ro": {
+        "closedString": "închis",
+        "header": "Program de lucru"
+    },
+    "it": {
+        "closedString": "chiuso",
+        "header": "Orari di apertura"
+    },
+    "es" : {
+        "closedString" : "cerrado",
+        "header" : "Horario"
+    }, 
+    "ru" : {
+        "closedString" : "закрыто",
+        "header" : "Рабочие часы"
+    }, 
+    "fr" : {
+        "closedString" : "fermé",
+        "header" : "Horaires d'ouverture"
+    }, 
+    "pt" : {
+        "closedString" : "fechado",
+        "header" : "Horário"
+    },
+    "bg" : {
+        "closedString" : "затворен",
+        "header" : "Разписание"
+    }
+}
+
