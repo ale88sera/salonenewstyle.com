@@ -18,3 +18,9 @@
     width: 250px;
   }
 }
+#timeTable {
+  border-collapse: inherit;
+}
+#timeTable > tbody > tr > td {
+  border-color: #333;
+}

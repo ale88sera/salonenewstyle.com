@@ -59,7 +59,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="data">
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -119,16 +119,20 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Orario</h2>
 
-                <table class="table">
+                <table class="table" id="timeTable">
                   <script>
-                  
                     $.getJSON('https://spreadsheets.google.com/feeds/list/1celYChYpLD-DJ186EHeE9hFxOxpRbGz3HnZfVZZOCJc/od6/public/values?alt=json', function(data) {
 
                       for (var i = 0; i < data.feed.entry.length; i++) {
 
                         var day = data.feed.entry[i].gsx$dayname['$t'];
                         var timeValue = data.feed.entry[i].gsx$statusvalue['$t'];
-                        document.write('<tr><td>'+ day +'</td><td>'+ timeValue +'</td></tr>');
+                        if (data.feed.entry[i].gsx$statusvalue['$t'] == "Chiuso") {
+                          string = '<tr class="warning"><td>'+ day +'</td><td>'+ timeValue +'</td></tr>';
+                        } else {
+                          string = '<tr><td>'+ day +'</td><td>'+ timeValue +'</td></tr>';
+                        }
+                        document.getElementById("timeTable").innerHTML += string;
                       }
                     });
                   </script>
