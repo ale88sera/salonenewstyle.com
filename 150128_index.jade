@@ -1,4 +1,11 @@
 doctype html
 html(lang="it")
   include //includes/head.jade  
-  body
+  //- body(id="page-top", data-spy="scroll", data-target=".navbar-fixed-top", onload="data")
+  body#page-top(data-spy="scroll", data-target=".navbar-fixed-top")
+    include //includes/nav.jade
+    include //includes/header.jade
+    include //includes/about.jade
+    include //includes/contact.jade
+    #map
+    include //includes/footer.jade
