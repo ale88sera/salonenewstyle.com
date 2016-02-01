@@ -3,3 +3,15 @@ $SNSbrand_prymary: #badd11
 
 // Edit
 $primary: $SNSbrand_prymary
+
+$state-warning-bg: transparent
+$state-warning-text: #666
+
+table
+  border: 1px solid $SNSbrand_prymary
+  tbody:first-child td
+    border: none
+
+.table>tbody>tr.warning>td
+  background-color: $state-warning-bg
+  color: $state-warning-text

@@ -1,5 +1,11 @@
-nav .navbar-header a.navbar-brand + img {
-  width: 50%; }
+table {
+  border: 1px solid #badd11; }
+  table tbody:first-child td {
+    border: none; }
+
+.table > tbody > tr.warning > td {
+  background-color: transparent;
+  color: #666; }
 
 body {
   width: 100%;
