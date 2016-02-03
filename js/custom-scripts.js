@@ -1,7 +1,6 @@
 // Opening hours content
-$.getJSON('https://spreadsheets.google.com/feeds/list/1celYChYpLD-DJ186EHeE9hFxOxpRbGz3HnZfVZZOCJc/od6/public/values?alt=json', function(data) {
+$.getJSON('https://spreadsheets.google.com/feeds/list/1celYChYpLD-DJ186EHeE9hFxOxpRbGz3HnZfVZZOCJc/1/public/values?alt=json', function(data) {
 
-  var tableContent = "";
   for (var i = 0; i < data.feed.entry.length; i++) {
 
     var day = data.feed.entry[i].gsx$dayname['$t'];
@@ -32,3 +31,20 @@ function initialize() {
   });
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+// Footer
+$.getJSON('https://spreadsheets.google.com/feeds/list/1celYChYpLD-DJ186EHeE9hFxOxpRbGz3HnZfVZZOCJc/2/public/values?alt=json', function(loadFooter) {
+
+  for (var i = 0; i < loadFooter.feed.entry.length; i++) {
+
+    var line ="<p>" + loadFooter.feed.entry[i].gsx$footercontent['$t'];
+    if (i==0) {
+      // line += " " + Date().getFullYear();
+      line += " " + new Date().getFullYear() + "</p>";
+    } else {
+      line += "</p>";
+    }
+    // document.getElementById("timeTable").innerHTML += string;
+    document.getElementById("footercontent").innerHTML += line;
+  }
+});
